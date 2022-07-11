@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const { normalizePort } = require('../helpers/utility');
+var logger = require('./logger').createLogger();
 const cors = require('cors');
 const port = normalizePort(process.env.PORT || '5001');
 const app = express();
@@ -11,9 +12,9 @@ const path = require('path');
 
 
 //don't show the log when it is test
-// if (process.env.NODE_ENV !== 'development') {
-//     app.use(logger('dev'));
-// }
+if (process.env.NODE_ENV !== 'development') {
+    app.use(logger('dev'));
+}
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
