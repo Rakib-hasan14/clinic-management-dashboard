@@ -8,7 +8,7 @@ const {checkToken} = require('../../authentication/checkToken')
  *
  */
 
-router.use('/main', require('./endPoint/main.route'));
+// router.use('/main', require('./endPoint/main.route'));
 router.use('/auth', require('./endPoint/auth.route'));
 router.use('/account', require('./endPoint/account.route'));
 router.use('/appointment', require('./endPoint/appointment.route'));
