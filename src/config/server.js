@@ -11,9 +11,9 @@ const path = require('path');
 
 
 //don't show the log when it is test
-if (process.env.NODE_ENV !== 'development') {
-    app.use(logger('dev'));
-}
+// if (process.env.NODE_ENV !== 'development') {
+//     app.use(logger('dev'));
+// }
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
