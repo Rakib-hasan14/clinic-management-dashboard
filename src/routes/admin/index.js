@@ -8,13 +8,13 @@ const {checkToken} = require('../../authentication/checkToken')
  *
  */
 
-router.use('/main', require('./endPoint/main.route'));
-router.use('/auth', require('./endPoint/auth.route'));
-router.use('/account', require('./endPoint/account.route'));
-router.use('/appointment', require('./endPoint/appointment.route'));
-router.use('/doctors', require('./endPoint/doctors.route'));
-router.use('/staffs', require('./endPoint/staff.route'));
-router.use('/pateints', require('./endPoint/pateint.route'));
-router.use('/profile', checkToken, require('./endPoint/profile.route'));
+router.use('/main', require('./endpoint/main.route'));
+router.use('/auth', require('./endpoint/auth.route'));
+router.use('/account', require('./endpoint/account.route'));
+router.use('/appointment', require('./endpoint/appointment.route'));
+router.use('/doctors', require('./endpoint/doctors.route'));
+router.use('/staffs', require('./endpoint/staff.route'));
+router.use('/pateints', require('./endpoint/pateint.route'));
+router.use('/profile', checkToken, require('./endpoint/profile.route'));
 
 module.exports = router
