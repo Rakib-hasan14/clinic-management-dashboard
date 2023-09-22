@@ -38,10 +38,12 @@ app.all('*', (req, res) =>
     res.status(404).json({ status: false, message: 'page not found' })
 );
 
+require('./src/config/mongodb');
+
 server.listen(port, () => {
     console.log('Server started on: ', `http://localhost:${port}`);
 });
 
-require('./src/config/mongodb');
+
 
 module.exports = server;
