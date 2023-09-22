@@ -21,12 +21,13 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 //To allow cross-origin requests
-app.use(
-    cors({
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-    })
-);
+const corsConfig = {
+    origin: '',
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE']
+}
+app.use(cors(corsConfig))
+app.options("", cors(corsConfig))
 
 //Route Prefixes
 app.use('/', require('../routes/api'));
