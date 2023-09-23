@@ -26,7 +26,6 @@ app.use(
         'Access-Control-Allow-Origin': '*',
     })
 );
-app.options("", cors(corsConfig))
 
 //Route Prefixes
 app.use('/', require('../routes/api'));
