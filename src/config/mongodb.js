@@ -19,4 +19,4 @@ const mongoose = require('mongoose');
             console.error('App starting error:', err.message);
             // process.exit(1);
         })
-});
+})();
