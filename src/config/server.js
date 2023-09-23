@@ -20,15 +20,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-//To allow cross-origin requests
-const corsConfig = {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': 'https://clinic-management.netlify.app/',
-    origin: '',
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE']
-}
-app.use(cors(corsConfig))
+app.use(
+    cors({
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+    })
+);
 app.options("", cors(corsConfig))
 
 //Route Prefixes
