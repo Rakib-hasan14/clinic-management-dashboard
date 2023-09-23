@@ -22,6 +22,8 @@ app.use(cookieParser());
 
 //To allow cross-origin requests
 const corsConfig = {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
     origin: '',
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE']
